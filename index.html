@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./scripts.js"></script>
+    <link rel="icon" type="image/jpg" href="./imgs/favicon.jpg">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo-holder">
+            <div class="logo">L</div>
+            <div class="logo-text">Portfolio Website</div>
+        </a>
+        <nav>
+            <ul id="menu">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+                <li>
+                    <a href="mailto:nazarzhuhan@gmail.com" class="button">Contact Me</a>
+                </li>
+            </ul>
+            <a href="#" class="mobile-toggle" onClick="toggleMobileMenu();">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10" />
+                </svg>
+
+            </a>
+        </nav>
+    </header>
+    <main>
+        <section class="hero container">
+            <div class="hero-blue">
+                <h1><small>Hi I'm</small>
+                    Nazar
+                </h1>
+                <p>
+                    I am a software engineer with a strong passion for developing innovative and secure solutions. I am
+                    eager to apply my knowledge in an enterprise environment, constantly learning and absorbing new
+                    skills that can enhance my work.
+                    <span>My ultimate goal is to create products that improve people's lives
+                        by making them easier and more efficient.
+                </p>
+                <div class="call-to-action">
+                    <a href="./CV_Nazar_Zhuhan_Software_Developer.pdf" class="button black">View Resume</a>
+                    <a href="mailto:nazarzhuhan@gmail.com" class="button white">Contact Me</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/KnOMM">
+                        <img src="./imgs/github.png" alt="GitHub" width="48" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/nazar-zhuhan/">
+                        <img src="./imgs/linkedin.png" alt="LinkedIn" width="48" />
+                    </a>
+                </div>
+            </div>
+            </div>
+            <div class="hero-yellow">
+                <img src="./imgs/hero-image-long.jpg" alt="Nazar Zhuhan" width="100%" />
+            </div>
+
+        </section>
+        <section class="logos container">
+            <div class="marquee">
+                <div class="track">
+                    <img src="./imgs/java.svg" alt="Java logo" width="100">
+                    <img src="./imgs/docker.svg" alt="Docker logo" width="128">
+                    <img src="./imgs/mysql-icon.svg" alt="MySql logo" width="128">
+                    <img src="./imgs/postgresql-icon.svg" alt="Postgresql logo" width="128">
+                    <img src="./imgs/apache_kafka-icon.svg" alt="Kafka logo" width="120">
+                    <img src="./imgs/mongodb-icon.svg" alt="MongoDB logo" width="128">
+                    <img src="./imgs/springio-icon.svg" alt="Spring logo" width="120">
+                    <img src="./imgs/prometheusio-icon.svg" alt="Prometheus logo" width="128">
+                    <img src="./imgs/getpostman-icon.svg" alt="Postman logo" width="128">
+                    <img src="./imgs/zipkin_symbol.png" alt="Zipkin logo" width="115">
+                    <img src="./imgs/grafana-icon.svg" alt="Grafana logo" width="128">
+                    <img src="./imgs/tempo-logo.png" alt="Tempo logo" width="128">
+                    <img src="./imgs/loki-logo.png" alt="Loki logo" width="128">
+
+                    <img src="./imgs/java.svg" alt="Java logo" width="100">
+                    <img src="./imgs/docker.svg" alt="Docker logo" width="128">
+                    <img src="./imgs/mysql-icon.svg" alt="MySql logo" width="128">
+                    <img src="./imgs/postgresql-icon.svg" alt="Postgresql logo" width="128">
+                    <img src="./imgs/apache_kafka-icon.svg" alt="Kafka logo" width="120">
+                    <img src="./imgs/mongodb-icon.svg" alt="MongoDB logo" width="128">
+                    <img src="./imgs/springio-icon.svg" alt="Spring logo" width="120">
+                    <img src="./imgs/prometheusio-icon.svg" alt="Prometheus logo" width="128">
+                    <img src="./imgs/getpostman-icon.svg" alt="Postman logo" width="128">
+                    <img src="./imgs/zipkin_symbol.png" alt="Zipkin logo" width="115">
+                    <img src="./imgs/grafana-icon.svg" alt="Grafana logo" width="128">
+                    <img src="./imgs/tempo-logo.png" alt="Tempo logo" width="128">
+                    <img src="./imgs/loki-logo.png" alt="Loki logo" width="128">
+                    <!-- <img src="./imgs/grafana-loki.svg" alt="Grafana Loki logo" width="128"> -->
+                    <!-- <img src="./imgs/grafana-tempo.svg" alt="Grafana Tempo logo" width="128"> -->
+
+                </div>
+            </div>
+        </section>
+        <section id="skills" class="skills container">
+            <h2>
+                <small>About Me</small>
+                Skills
+            </h2>
+            <div class="holder-blue">
+                <div class="left-column">
+                    <h3>Technical Skills</h3>
+                    <ul>
+                        <li>Java</li>
+                        <li>Spring</li>
+                        <li>Docker</li>
+                        <li>MySQL</li>
+                        <li>PostgreSQL</li>
+                        <li>MongoDB</li>
+                        <li>Apache Kafka</li>
+                        <li>Prometheus</li>
+                        <li>Grafana</li>
+                        <li>Loki</li>
+                        <li>Tempo</li>
+                        <li>Zipkin</li>
+                    </ul>
+                </div>
+                <div class="right-column">
+                    <h3>A bit about me</h3>
+                    <p>I am a passionate and dedicated Java learner, driven by a strong desire to apply my knowledge in
+                        real-world scenarios. With hands-on experience in the Spring Java Framework, I have developed
+                        the ability to work both independently and collaboratively in team environments. My technical
+                        skills extend beyond Java, as I am also proficient in Linux, and yes, I can confidently navigate
+                        through vim!
+
+                        Eager to embrace new challenges, I am continuously seeking opportunities to grow and expand my
+                        expertise. I'm excited to contribute to projects where I can learn, adapt, and make a meaningful
+                        impact.</p>
+                </div>
+            </div>
+        </section>
+        <section id="projects" class="bento container">
+            <h2>
+                <small>Previous</small>
+                Completed Projects
+            </h2>
+            <div class="bento-grid">
+                <a href="https://github.com/KnOMM/microservices-product" class="bento-item">
+                    <img src="./imgs/bento-1.png" alt="Microservices" width="100%" />
+                    <div class="image-name">Microservices</div>
+                </a>
+                <a href="https://github.com/KnOMM/SpeedTyping" class="bento-item">
+                    <img src="./imgs/bento-2.png" alt="Speed typing" width="100%" />
+                    <div class="image-name">Speed typing</div>
+                </a>
+                <a href="https://github.com/KnOMM/MonitoringSimulator" class="bento-item">
+                    <img src="./imgs/bento-3.png" alt="Monitoring simulator" width="100%" />
+                    <div class="image-name">Monitoring simulator</div>
+                </a>
+                <a href="https://github.com/KnOMM/CompleteSecurity/tree/master/OAuth2withJWT" class="bento-item">
+                    <img src="./imgs/bento-4.png" alt="Cash cards" width="100%" />
+                    <div class="image-name">Cash cards</div>
+                </a>
+                <a href="https://github.com/KnOMM/CompleteSecurity/blob/master/jwt_authentication_&_authorization/README.md" class="bento-item">
+                    <img src="./imgs/bento-5.png" alt="JWT authentication/revocation" width="100%" />
+                    <div class="image-name">JWT authentication</div>
+                </a>
+                <a href="https://github.com/KnOMM/CipherNotes" class="bento-item">
+                    <img src="./imgs/bento-6.png" alt="Encrypt storage" width="100%" />
+                    <div class="image-name">Encrypt storage</div>
+                </a>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
