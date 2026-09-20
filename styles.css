@@ -23,6 +23,7 @@
 }
 
 body {
+    padding-top: var(--header-height, 89px);
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -39,8 +40,10 @@ a {
 }
 
 header {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 20;
     background: white;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
