@@ -500,3 +500,86 @@ h3 {
     .logos .marquee .track { animation: none; }
     .bento .bento-grid .project-image img { transition: none; }
 }
+
+html { scroll-behavior: smooth; }
+
+#home,
+#skills,
+#projects,
+#contact {
+    scroll-margin-top: 24px;
+}
+
+a:focus-visible, button:focus-visible {
+    outline: 3px solid var(--blue);
+    outline-offset: 4px;
+}
+
+header nav .mobile-toggle {
+    background: var(--base-100);
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    line-height: 0;
+}
+
+header nav .mobile-toggle:hover { background: var(--blue-100); }
+header nav ul li a.button { color: white; }
+header nav ul li a.button:hover { color: var(--blue); }
+
+.site-footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 24px;
+    padding-bottom: 72px;
+    font-size: 16px;
+    color: var(--base);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px 30px;
+}
+
+.footer-name { color: var(--base-800); font-weight: 600; margin-bottom: 4px; }
+.site-footer nav { display: flex; flex-wrap: wrap; gap: 4px 24px; }
+.site-footer nav a { display: inline-flex; align-items: center; min-height: 44px; }
+.copyright { font-size: 14px; margin-top: 16px; }
+
+.back-to-top {
+    position: fixed;
+    right: max(16px, env(safe-area-inset-right));
+    bottom: max(16px, env(safe-area-inset-bottom));
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--blue);
+    border-radius: 10px;
+    background: var(--blue);
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.back-to-top[hidden] { display: none; }
+.back-to-top:hover, .back-to-top:focus-visible { background: var(--blue-100); color: var(--blue); }
+
+@media (max-width: 768px) {
+    html { scroll-padding-bottom: 76px; }
+    .back-to-top { right: max(4px, env(safe-area-inset-right)); }
+    .hero .hero-blue, .skills .holder-blue, .bento .bento-grid .project-content {
+        padding-right: 40px;
+    }
+    .site-footer { padding-right: 60px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .back-to-top, .button { transition: none; }
+}

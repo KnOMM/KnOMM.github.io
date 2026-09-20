@@ -11,20 +11,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
-    <script src="./scripts.js"></script>
+    <script src="./scripts.js" defer></script>
     <link rel="icon" type="image/jpg" href="./imgs/favicon.jpg">
 </head>
 
 <body>
-    <header>
-        <a href="#" class="logo-holder">
+    <header id="home" tabindex="-1">
+        <a href="#home" class="logo-holder">
             <div class="logo">N</div>
             <div class="logo-text">Nazar Zhuhan</div>
         </a>
-        <nav>
+        <nav aria-label="Main navigation">
             <ul id="menu">
                 <li>
-                    <a href="#">Home</a>
+                    <a href="#home">Home</a>
                 </li>
                 <li>
                     <a href="#skills">Skills</a>
@@ -33,16 +33,16 @@
                     <a href="#projects">Projects</a>
                 </li>
                 <li>
-                    <a href="mailto:nazarzhuhan@gmail.com" class="button">Contact Me</a>
+                    <a href="#contact" class="button">Contact Me</a>
                 </li>
             </ul>
-            <a href="#" class="mobile-toggle" onClick="toggleMobileMenu();">
+            <button type="button" class="mobile-toggle" aria-label="Toggle navigation" aria-controls="menu" aria-expanded="false">
                 <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                     width="24" height="24" fill="none" viewBox="0 0 24 24">
                     <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10" />
                 </svg>
 
-            </a>
+            </button>
         </nav>
     </header>
     <main>
@@ -75,7 +75,7 @@
                 </div>
             </div>
         </section>
-        <section id="skills" class="skills container">
+        <section id="skills" tabindex="-1" class="skills container">
             <h2>
                 <small>About Me</small>
                 Skills
@@ -142,10 +142,10 @@
                 </div>
             </div>
         </section>
-        <section id="projects" class="bento container">
+        <section id="projects" tabindex="-1" class="bento container">
             <h2>
                 <small>Security &amp; Engineering</small>
-                Selected Projects
+                Projects
             </h2>
             <div class="bento-grid">
                 <a href="https://github.com/KnOMM/elastic-prep-proc" class="bento-item featured">
@@ -235,6 +235,26 @@
             </div>
         </section>
     </main>
+    <footer id="contact" class="site-footer container" tabindex="-1">
+        <div class="footer-content">
+            <div>
+                <p class="footer-name">Nazar Zhuhan</p>
+                <p>SOC Analyst | Security Operations</p>
+            </div>
+            <nav aria-label="Contact links">
+                <a href="https://github.com/KnOMM">GitHub</a>
+                <a href="https://www.linkedin.com/in/nazar-zhuhan/">LinkedIn</a>
+                <a href="mailto:nazarzhuhan@gmail.com">Email</a>
+                <a href="./CV%20Nazar%20Zhuhan.pdf">CV</a>
+            </nav>
+        </div>
+        <p class="copyright">© 2026 Nazar Zhuhan</p>
+    </footer>
+    <button type="button" class="back-to-top" aria-label="Back to top" hidden>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="m6 12 6-6 6 6M12 6v12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    </button>
 </body>
 
 </html>
