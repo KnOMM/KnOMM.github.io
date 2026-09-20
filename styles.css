@@ -7,6 +7,7 @@
 }
 
 :root {
+    --header-height: 68px;
     --base: #555;
     --base-100: #f1f1f1;
     --base-800: #000;
@@ -23,7 +24,7 @@
 }
 
 body {
-    padding-top: var(--header-height, 89px);
+    padding-top: var(--header-height);
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -47,38 +48,13 @@ header {
     z-index: 20;
     background: white;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    padding-top: 10px;
-    padding-bottom: 10px;
+    height: var(--header-height);
     display: flex;
     max-width: 1440px;
     margin: auto;
-    justify-content: space-between;
+    justify-content: flex-end;
+    align-items: center;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-
-    .logo-holder {
-        display: flex;
-        padding: 10px;
-        align-items: center;
-        font-weight: 600;
-        color: var(--base-800);
-
-        .logo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-            background-color: var(--base-800);
-            color: var(--base-100);
-            height: 48px;
-            width: 48px;
-            margin-right: 20px;
-            border-radius: 50%;
-        }
-
-        .logo-text {
-            flex: 1;
-        }
-    }
 
     nav {
         display: flex;
@@ -113,21 +89,20 @@ header {
 
             @media (max-width: 768px) {
                 display: inline-block;
-                position: absolute;
-                top: 20px;
-                right: 20px;
             }
         }
     }
 
+    @media (max-width: 1440px) {
+        padding-inline: 30px;
+    }
+
+    @media (max-width: 480px) {
+        padding-inline: 16px;
+    }
+
     @media (max-width: 768px) {
-        flex-direction: column;
-        align-items: center;
-
         nav {
-            margin-top: 0;
-            width: 100%;
-
             ul {
                 position: absolute;
                 top: 100%;
@@ -135,7 +110,7 @@ header {
                 background: white;
                 border-bottom: 1px solid rgba(0, 0, 0, 0.1);
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-                max-height: calc(100dvh - var(--header-height, 89px) - 16px);
+                max-height: calc(100dvh - var(--header-height) - 16px);
                 overflow-y: auto;
                 display: none;
                 flex-direction: column;
@@ -490,18 +465,6 @@ h3 {
 }
 
 @media (max-width: 480px) {
-    header .logo-holder {
-        margin-right: 50px;
-
-        .logo {
-            width: 48px;
-            height: 48px;
-            margin-right: 10px;
-        }
-
-        .logo-text { font-size: 18px; }
-    }
-
     .container { padding-left: 16px; padding-right: 16px; }
     h2 { font-size: 38px; padding: 24px 0; }
     .hero .hero-blue, .skills .holder-blue, .bento .bento-grid .project-content { padding: 24px; }
@@ -514,7 +477,7 @@ h3 {
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: var(--header-height, 89px);
+    scroll-padding-top: var(--header-height);
 }
 
 #home,

@@ -2,14 +2,6 @@ const menu = document.getElementById("menu");
 const menuToggle = document.querySelector(".mobile-toggle");
 const backToTop = document.querySelector(".back-to-top");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-const header = document.querySelector("header");
-
-function updateHeaderHeight() {
-    document.documentElement.style.setProperty("--header-height", `${header.offsetHeight}px`);
-}
-
-updateHeaderHeight();
-new ResizeObserver(updateHeaderHeight).observe(header);
 
 function setMenuOpen(open) {
     menu.classList.toggle("active", open);
